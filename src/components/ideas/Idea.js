@@ -42,7 +42,7 @@ const Idea = ({ idea }) => {
 };
 
 Idea.propTypes = {
-  idea: PropTypes.string.isRequired
+  idea: PropTypes.object.isRequired
 };
 
 export default Idea;
