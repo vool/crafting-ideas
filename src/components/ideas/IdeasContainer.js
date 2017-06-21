@@ -6,7 +6,21 @@ import IdeaInput from './IdeaInput';
 import * as ideasActions from '../../actions/ideasActions';
 
 const ideasStyle = {
-  marginTop: '50px'
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  marginTop: '50px',
+  border: '1px solid #999',
+  borderRadius: '10px',
+  width: '500px',
+  height: '600px',
+  backgroundColor: '#eee'
+};
+
+const inputStyle = {};
+
+const listStyle = {
+  marginTop: '15px'
 };
 
 class IdeasContainer extends React.Component {
@@ -31,10 +45,10 @@ class IdeasContainer extends React.Component {
   render() {
     return (
       <div style={ideasStyle}>
-        <div>
+        <div style={inputStyle}>
           <IdeaInput onIdeaSubmit={this.addIdea} />
         </div>
-        <div>
+        <div style={listStyle}>
           <IdeaList ideas={this.props.ideas} />
         </div>
       </div>

@@ -3,9 +3,8 @@ import React, { PropTypes } from 'react';
 const ideaStyle = {
   fontFamily: 'Sans-Serif',
   width: '400px',
-  height: '50px',
-  padding: '5px',
   color: '#444',
+  backgroundColor: 'white',
   border: '1px solid #ccc',
   borderRadius: '5px',
   marginTop: '5px',
