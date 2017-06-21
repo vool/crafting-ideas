@@ -11,32 +11,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 
-const ideas = [
-  {
-    value: 'This is a really cool idea!',
-    owner: {
-      name: 'Tyler Anton',
-      username: 'tyleranton'
-    }
-  },
-  {
-    value: 'This is another really cool idea!',
-    owner: {
-      name: 'Tyler Anton',
-      username: 'tyleranton'
-    }
-  },
-  {
-    value: 'This is yet another a really cool idea!',
-    owner: {
-      name: 'Tyler Anton',
-      username: 'tyleranton'
-    }
-  }
-];
-
-store.dispatch(getIdeas(ideas));
-
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
