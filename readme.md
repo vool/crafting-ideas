@@ -16,7 +16,7 @@ There will also be a way to privately track and catalogue one own's ideas that y
 
 Here is one such idea. This idea is nothing though until someone actually builts and makes it a 'thing'. This platform should minimse the time that it takes from getting a raw idea out into the world and seeing it grow.
 
-<h1 align="center"> Implementation 🚀</h1>
+<h1 align="center"> Implementation</h1>
 
 I want to create a working MVP as soon as possible. Since this platform is essentially a social network for sharing and building on ideas together, it needs traction to actually be of any use. If there are no people, there is no value in the product. 
 
@@ -37,32 +37,11 @@ And then connect to http://localhost:3000
 If you want to help, there is an [active slack group](https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA) that you can join.
 
 
-<h1 align="center"> Possible Features</h1>
+<h1 align="center"><a href="https://github.com/nikitavoloboev/crafting-ideas/issues"> Possible Features ✨</a></h1>
 
-- ability to create a profile (similar to twitter)
-- aside from profile picture and short bio of oneself, user will have both
-  a private and public list of ideas he is working on
-- there will be two forms of communication 
-    - private messages between users
-    - and public sharing of ideas in a tweet like manner
-- the main difference between this website and twitter is that this website
-  should purely focus on nurturing of ideas by helping people find help they
-  need or discuss and expand their ideas with other people
-- ideas can be tagged with a # 
-    - i.e. a person has an idea to create an alfred workflow
-    - he can say publically 'I want to make an alfred workflow that searches
-      twitter with autosuggestions #alfred'
-- from there he can either publish it publically and let all see his idea and
-  offer help
-    - or he can publish it privately and it will saved in user's private log of
-      ideas with the date when the idea was written down
-- if user chooses to share it publically, it will sent in a format similar to
-  a tweet (and he can attach a link to the post like a github link) however there will be few options
-    - such as offering help
-- there will be powerful search functionality that would allow people to search
-  for other people's ideas that they can give their hand in making together
-  
-  
+There is a list of [open issues](https://github.com/nikitavoloboev/crafting-ideas/issues) you can take a look at. Choose any that you think are interesting or add your own. 
+
+
   <h1 align="center"> Help 💚</h1>
 
 I hope I am not alone in wanting to build this and other people will join me in this. 
