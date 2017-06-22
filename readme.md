@@ -3,8 +3,8 @@
 <a href="https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA">
 		<img src="https://img.shields.io/badge/Slack-channel-green.svg">
 	</a>	
-	<a href="http://waffle.io/nikitavoloboev/crafting-ideas">
-		<img src="https://badge.waffle.io/nikitavoloboev/crafting-ideas.svg?label=ready&title=In progress">
+	<a href="https://waffle.io/nikitavoloboev/crafting-ideas">
+		<img src="https://badge.waffle.io/nikitavoloboev/crafting-ideas.svg?label=ready&title=In Progress">
 	</a>
 </div>
 <h1 align="center"> Idea 💡</h1>
