@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div style={headerStyle}>
       <h1>Crafting Ideas</h1>
-      <img style={logoStyle} src={logo} />
+      <img style={logoStyle} src={logo} alt="Logo" />
       <span><em>Ideas are fragile; nourish them.</em></span>
       <hr />
     </div>

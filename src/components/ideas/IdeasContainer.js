@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import IdeaList from './IdeaList';
@@ -30,6 +31,11 @@ class IdeasContainer extends React.Component {
     this.addIdea = this.addIdea.bind(this);
   }
 
+  static propTypes = {
+    ideas: PropTypes.array.isRequired,
+    addIdea: PropTypes.func.isRequired
+  };
+
   addIdea(ideaText) {
     const idea = {
       value: ideaText,
@@ -55,11 +61,6 @@ class IdeasContainer extends React.Component {
     );
   }
 }
-
-IdeasContainer.propTypes = {
-  ideas: PropTypes.array.isRequired,
-  addIdea: PropTypes.func.isRequired
-};
 
 const mapStateToProps = state => {
   return { ideas: state.ideas };

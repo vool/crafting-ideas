@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Idea from './Idea';
 
 const ideaListStyle = {};
@@ -6,7 +7,7 @@ const ideaListStyle = {};
 const IdeaList = ({ ideas }) => {
   return (
     <div style={ideaListStyle}>
-      {ideas.map(idea => <Idea idea={idea} />)}
+      {ideas.map((idea, index) => <Idea key={index} idea={idea} />)}
     </div>
   );
 };
