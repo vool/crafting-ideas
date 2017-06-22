@@ -14,7 +14,7 @@ It would allow users to create a profile and then add their ideas. By default al
 
 Other people can then take a look at the profiles and see what ideas they think are interesting and ask how they can help and thus ideas actully have more chance at becoming a 'thing'.
 
-Here is one such idea. This idea is nothing though until someone actually builts and makes it a 'thing'. This platform should minimse the time that it takes from getting a raw idea out into the world and seeing it grow.
+Here is one such idea. This idea is nothing though until someone actually builds and makes it a 'thing'. This platform should minimse the time that it takes from getting a raw idea out into the world and seeing it grow.
 
 <h1 align="center"> Implementation</h1>
 
