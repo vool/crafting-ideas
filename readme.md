@@ -4,7 +4,7 @@
 		<img src="https://img.shields.io/badge/Slack-channel-green.svg">
 	</a>	
 	<a href="https://waffle.io/nikitavoloboev/crafting-ideas">
-		<img src="https://badge.waffle.io/nikitavoloboev/crafting-ideas.svg?label=ready&title=In Progress">
+		<img src="https://badge.waffle.io/nikitavoloboev/crafting-ideas.svg?label=waffle%3Ain%20progress&title=In%20Progress">
 	</a>
 </div>
 <h1 align="center"> Idea 💡</h1>
