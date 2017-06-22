@@ -1,5 +1,5 @@
 <div align="center">
-<h1>A platform to share and grow your ideas 🍀</h1>
+<h1><a href="http://bit.ly/crafting-ideas">A platform to share and grow your ideas 🍀</a></h1>
 <a href="https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA">
 		<img src="https://img.shields.io/badge/Slack-channel-green.svg">
 	</a>
@@ -21,6 +21,20 @@ Here is one such idea. This idea is nothing though until someone actually builts
 I want to create a working MVP as soon as possible. Since this platform is essentially a social network for sharing and building on ideas together, it needs traction to actually be of any use. If there are no people, there is no value in the product. 
 
 I will try to create a mock prototype with React and [create react app](https://github.com/facebookincubator/create-react-app) and then iterate on that adding backend and database as I go.
+
+<h1 align="center"> Build it 🚀 </a></h1>
+
+To run it locally, clone the project and run
+
+```
+npm install
+
+npm start
+```
+
+And then connect to http://localhost:3000
+
+If you want to help, there is an [active slack group](https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA) that you can join.
 
 
 <h1 align="center"> Possible Features</h1>
