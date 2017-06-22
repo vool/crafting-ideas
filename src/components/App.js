@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/LA.png';
+import Header from './common/Header';
+import IdeasContainer from './ideas/IdeasContainer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <img src={logo} />
-      </div>
-    );
-  }
-}
+const appStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+};
+
+const App = () => {
+  return (
+    <div style={appStyle}>
+      <Header />
+      <IdeasContainer />
+    </div>
+  );
+};
 
 export default App;

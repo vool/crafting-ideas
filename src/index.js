@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store/configureStore';
+import { getIdeas } from './actions/ideasActions';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css';

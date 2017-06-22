@@ -7,5 +7,12 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import App from '../components/App';
+import Idea from '../components/ideas/Idea';
+import IdeaList from '../components/ideas/IdeaList';
+import IdeasContainer from '../components/ideas/IdeasContainer';
 
-storiesOf('Crafting Ideas', module).add('App', () => <App />);
+storiesOf('Crafting Ideas', module)
+  .add('App', () => <App />)
+  .add('Idea', () => <Idea idea="This is a really cool idea!" />)
+  .add('IdeaList', () => <IdeaList />)
+  .add('IdeasContainer', () => <IdeasContainer />);
