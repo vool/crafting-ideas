@@ -10,8 +10,10 @@ import App from '../components/App';
 import Idea from '../components/ideas/Idea';
 import IdeaList from '../components/ideas/IdeaList';
 import IdeasContainer from '../components/ideas/IdeasContainer';
+import Login from '../components/auth/Login';
 
 storiesOf('Crafting Ideas', module)
+  .add('Login', () => <Login />)
   .add('App', () => <App />)
   .add('Idea', () => <Idea idea="This is a really cool idea!" />)
   .add('IdeaList', () => <IdeaList />)

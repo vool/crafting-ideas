@@ -7,20 +7,22 @@ import IdeaInput from './IdeaInput';
 import * as ideasActions from '../../actions/ideasActions';
 
 const ideasStyle = {
+  position: 'absolute',
+  width: '50%',
+  top: '100px',
+  padding: '20px',
+  // background: 'white',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
-  marginTop: '50px',
-  border: '1px solid #999',
-  borderRadius: '10px',
-  width: '500px',
-  height: '600px',
-  backgroundColor: '#eee'
+  alignItems: 'center'
 };
 
-const inputStyle = {};
+const inputStyle = {
+  width: '50%'
+};
 
 const listStyle = {
+  width: '50%',
   marginTop: '15px'
 };
 

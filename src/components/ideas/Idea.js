@@ -7,8 +7,7 @@ const ideaStyle = {
   color: '#444',
   backgroundColor: 'white',
   border: '1px solid #ccc',
-  borderRadius: '5px',
-  marginTop: '5px',
+  // marginTop: '1px',
   padding: '10px'
 };
 

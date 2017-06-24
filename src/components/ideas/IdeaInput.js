@@ -2,10 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class IdeaInput extends React.Component {
+  inputContainer = {
+    width: '50%'
+  };
+
   inputStyle = {
     marginTop: '20px',
     padding: '10px',
-    borderRadius: '5px'
+    borderRadius: '50px',
+    width: '100%',
+    outline: 'none'
   };
 
   static propTypes = {

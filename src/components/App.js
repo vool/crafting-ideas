@@ -8,13 +8,35 @@ const appStyle = {
   alignItems: 'center'
 };
 
-const App = () => {
+const _isLoggedIn = () => {
+  const token = window.localStorage.getItem('auth0IdToken');
+
+  if (token) return true;
+  else return false;
+};
+
+const renderLoggedOut = () => {
   return (
     <div style={appStyle}>
       <Header />
+    </div>
+  );
+};
+
+const renderLoggedIn = () => {
+  return (
+    <div style={appStyle}>
       <IdeasContainer />
     </div>
   );
+};
+
+const App = () => {
+  if (_isLoggedIn()) {
+    return renderLoggedIn();
+  } else {
+    return renderLoggedOut();
+  }
 };
 
 export default App;
