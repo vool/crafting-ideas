@@ -3,7 +3,6 @@
 <a href="https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA">
 		<img src="https://img.shields.io/badge/Slack-channel-green.svg">
 	</a>	
-	<a href="https://waffle.io/nikitavoloboev/crafting-ideas">
 </div>
 
 <h1 align="center"> Idea 💡</h1>
