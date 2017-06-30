@@ -3,10 +3,8 @@
 <a href="https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA">
 		<img src="https://img.shields.io/badge/Slack-channel-green.svg">
 	</a>	
-	<a href="https://waffle.io/nikitavoloboev/crafting-ideas">
-		<img src="https://badge.waffle.io/nikitavoloboev/crafting-ideas.svg?label=waffle%3Ain%20progress&title=In%20Progress">
-	</a>
 </div>
+
 <h1 align="center"> Idea 💡</h1>
 
 Ideas can change the world. Although a lot of people put too much value into them. Ideas without implementation are nothing. Projects like [Kickstarter](https://www.kickstarter.com/) do an amazing job at helping an idea grow up and become a thing.
