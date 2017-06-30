@@ -5,20 +5,9 @@ class Login extends Component {
   constructor() {
     super();
 
-    const options = {
-      // auth: {
-      //   redirect: false
-      // },
-      // socialButtonStyle: 'small',
-      theme: {
-        primaryColor: '#31324F'
-      }
-    };
-
     this._lock = new Auth0Lock(
       'ggQpcrvOq7TcjmoHiBBfpYP4SQRJ1nJQ',
-      'crafting-ideas.auth0.com',
-      options
+      'crafting-ideas.auth0.com'
     );
   }
 
