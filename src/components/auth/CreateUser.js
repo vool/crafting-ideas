@@ -51,6 +51,8 @@ class CreateUser extends React.Component {
       return <div>Loading</div>;
     }
 
+    console.log(this.props.data);
+
     if (
       this.props.data.user ||
       window.localStorage.getItem('auth0IdToken') === null

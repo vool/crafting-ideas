@@ -26,7 +26,7 @@ const listStyle = {
   marginTop: '15px'
 };
 
-class IdeasContainer extends React.Component {
+export class IdeasContainer extends React.Component {
   constructor(props) {
     super(props);
 

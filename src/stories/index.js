@@ -6,15 +6,29 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import App from '../components/App';
 import Idea from '../components/ideas/Idea';
 import IdeaList from '../components/ideas/IdeaList';
-import IdeasContainer from '../components/ideas/IdeasContainer';
-import Login from '../components/auth/Login';
+import { IdeasContainer } from '../components/ideas/IdeasContainer';
+import ProfileCard from '../components/profile/ProfileCard';
 
-storiesOf('Crafting Ideas', module)
-  .add('Login', () => <Login />)
-  .add('App', () => <App />)
-  .add('Idea', () => <Idea idea="This is a really cool idea!" />)
-  .add('IdeaList', () => <IdeaList />)
-  .add('IdeasContainer', () => <IdeasContainer />);
+const getIdeas = () => {
+  let ideas = [];
+  for (let i = 0; i < 3; i++) {
+    ideas.push({
+      value: 'This is a really cool idea!',
+      owner: {
+        name: 'Tyler Anton',
+        username: 'tyleranton'
+      }
+    });
+  }
+
+  return ideas;
+};
+
+storiesOf('Ideas', module)
+  .add('Idea', () => <Idea idea={getIdeas()[0]} />)
+  .add('IdeaList', () => <IdeaList ideas={getIdeas()} />)
+  .add('IdeasContainer', () => <IdeasContainer ideas={getIdeas()} />);
+
+storiesOf('Profile', module).add('ProfileCard', () => <ProfileCard />);
