@@ -1,9 +1,16 @@
 <div align="center">
 <h1><a href="http://bit.ly/crafting-ideas">A platform to share and grow your ideas 🍀</a></h1>
 <a href="https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA">
-		<img src="https://img.shields.io/badge/Slack-channel-green.svg">
+		<img src="https://img.shields.io/badge/Slack-💬-green.svg">
+		<a href="https://www.patreon.com/nikitavoloboev">
+		<img src="https://img.shields.io/badge/Say%20Thanks-💗-ff69b4.svg">
+	</a>
 	</a>	
+		<a href="https://github.com/nikitavoloboev/crafting-ideas/blob/master/LICENSE">
+		<img src="https://img.shields.io/pypi/l/pipenv.svg">
+	</a>
 </div>
+
 
 <h1 align="center"> Idea 💡</h1>
 
