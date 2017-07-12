@@ -1,6 +1,7 @@
 import React from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { withRouter, Redirect } from 'react-router-dom';
+import styled from 'styled-components';
 import { graphql, gql } from 'react-apollo';
 
 class CreateUser extends React.Component {
@@ -13,69 +14,35 @@ class CreateUser extends React.Component {
     username: ''
   };
 
-  createUserContainer = {
-    position: 'absolute',
-    width: '50%',
-    height: '400px',
-    top: '50%',
-    marginTop: '-200px',
-    padding: '20px',
-    background: 'white',
-    boxShadow: '2px 2px 5px 0px rgba(100,100,100,1)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  };
+  Container = styled.div`
+    position: absolute;
+    width: 50%;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    padding: 20px;
+    background: white;
+    box-shadow: 2px 2px 5px 0px rgba(100, 100, 100, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `;
 
-  createUserButton = {
-    padding: '10px',
-    width: '150px',
-    marginTop: '20px',
-    background: '#00BFFF',
-    color: 'white',
-    boxShadow: '2px 2px 5px 0px rgba(100,100,100,1)',
-    border: 'none',
-    cursor: 'pointer'
-  };
+  CreateBtn = styled.button`
+    padding: 10px;
+    width: 150px;
+    margin-top: 20px;
+    background: #00bfff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  `;
 
-  inputStyle = {
-    marginTop: '20px',
-    padding: '10px',
-    borderRadius: '50px',
-    // width: '100%',
-    outline: 'none'
-  };
-
-  render() {
-    if (this.props.data.loading) {
-      return <div>Loading</div>;
-    }
-
-    console.log(this.props.data);
-
-    if (
-      this.props.data.user ||
-      window.localStorage.getItem('auth0IdToken') === null
-    ) {
-      return <Redirect to={{ pathname: '/' }} />;
-    }
-
-    return (
-      <div style={this.createUserContainer}>
-        <input
-          style={this.inputStyle}
-          value={this.state.username}
-          placeholder="Username"
-          onChange={e => this.setState({ username: e.target.value })}
-        />
-
-        {this.state.username &&
-          <button style={this.createUserButton} onClick={this.createUser}>
-            Sign up
-          </button>}
-      </div>
-    );
-  }
+  UserInput = styled.input`
+    margin-top: 20px;
+    padding: 10px;
+    outline: none;
+  `;
 
   createUser = () => {
     const variables = {
@@ -84,7 +51,6 @@ class CreateUser extends React.Component {
       name: 'Tyler Anton',
       username: this.state.username
     };
-    console.log(variables);
 
     this.props
       .createUser({ variables })
@@ -96,11 +62,45 @@ class CreateUser extends React.Component {
         this.props.history.replace('/');
       });
   };
+
+  render() {
+    if (this.props.data.loading) return <div>Loading...</div>;
+
+    if (
+      this.props.data.user ||
+      window.localStorage.getItem('auth0IdToken') === null
+    ) {
+      return <Redirect to={{ pathname: '/' }} />;
+    }
+
+    return (
+      <this.Container>
+        <this.UserInput
+          value={this.state.username}
+          placeholder="Username"
+          onChange={e => this.setState({ username: e.target.value })}
+        />
+
+        {this.state.username &&
+          <this.CreateBtn onClick={this.createUser}>Sign Up</this.CreateBtn>}
+      </this.Container>
+    );
+  }
 }
 
 const createUser = gql`
-  mutation ($idToken: String!, $name: String!, $email: String!, $username: String!){
-    createUser(authProvider: {auth0: {idToken: $idToken}}, name: $name, email: $email, username: $username) {
+  mutation(
+    $idToken: String!
+    $name: String!
+    $email: String!
+    $username: String!
+  ) {
+    createUser(
+      authProvider: { auth0: { idToken: $idToken } }
+      name: $name
+      email: $email
+      username: $username
+    ) {
       id
     }
   }

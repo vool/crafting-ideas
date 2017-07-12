@@ -1,14 +1,58 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const navBarStyle = {
-  top: '0',
-  width: '100%',
-  height: '65px',
-  background: '#4A708B'
-};
+class NavBar extends React.Component {
+  Nav = styled.nav`
+    position: fixed;
+    width: 100%;
+    background-color: rgba(51, 56, 64, 0.98);
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+  `;
 
-const NavBar = () => {
-  return <div style={navBarStyle} />;
-};
+  HomeNav = styled.div`
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      color: #61dafb;
+    }
+  `;
+
+  NavItem = styled.div`
+    position: absolute;
+    top: 35%;
+    right: 5%;
+  `;
+
+  Logout = styled.a`
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+  `;
+
+  _logout = () => {
+    window.localStorage.removeItem('auth0IdToken');
+    window.location.reload();
+  };
+
+  render() {
+    return (
+      <this.Nav>
+        <this.HomeNav>
+          <span>CRAFTING IDEAS</span>
+        </this.HomeNav>
+        <this.NavItem>
+          <this.Logout onClick={this._logout}>Logout</this.Logout>
+        </this.NavItem>
+      </this.Nav>
+    );
+  }
+}
 
 export default NavBar;

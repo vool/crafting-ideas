@@ -1,35 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled from 'styled-components';
 import { ApolloProvider } from 'react-apollo';
 import client from './apolloClient';
-import App from './components/App';
-import CreateUser from './components/auth/CreateUser';
-import NavBar from './components/nav/NavBar';
-import registerServiceWorker from './registerServiceWorker';
-import configureStore from './store/configureStore';
 import { BrowserRouter, Route } from 'react-router-dom';
+import App from './App';
+import NavBar from './components/nav/NavBar';
+import CreateUser from './components/auth/CreateUser';
+import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const store = configureStore();
-
-const style = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center'
-};
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
 
 ReactDOM.render(
-  <ApolloProvider client={client} store={store}>
-    <BrowserRouter>
-      <div>
-        <NavBar />
-        <div style={style}>
+  <ApolloProvider client={client}>
+    <div>
+      <NavBar />
+      <BrowserRouter>
+        <Container>
           <Route exact path="/" component={App} />
-          <Route path="/create" component={CreateUser} />
-        </div>
-      </div>
-    </BrowserRouter>
+          <Route path="/signup" component={CreateUser} />
+        </Container>
+      </BrowserRouter>
+    </div>
   </ApolloProvider>,
   document.getElementById('root')
 );

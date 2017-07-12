@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import Auth0Lock from 'auth0-lock';
+import styled from 'styled-components';
 
-class Login extends Component {
+class Login extends React.Component {
   constructor() {
     super();
 
@@ -11,45 +14,34 @@ class Login extends Component {
     );
   }
 
-  loginButton = {
-    padding: '10px',
-    width: '150px',
-    background: '#00BFFF',
-    color: 'white',
-    boxShadow: '2px 2px 5px 0px rgba(100,100,100,1)',
-    cursor: 'pointer'
+  static propTypes = {
+    history: PropTypes.object.isRequired
   };
+
+  LoginBtn = styled.button`
+    padding: 10px;
+    margin: 10%;
+    width: 150px;
+    background: #0ebfe9;
+    color: white;
+    cursor: pointer;
+    border: none;
+  `;
 
   componentDidMount() {
     this._lock.on('authenticated', authResult => {
       window.localStorage.setItem('auth0IdToken', authResult.idToken);
-      window.location.reload();
+      this.props.history.push('/signup');
     });
   }
-
-  _isLoggedIn = () => {
-    const token = window.localStorage.getItem('auth0IdToken');
-
-    if (token) return true;
-    else return false;
-  };
 
   _login = () => {
     this._lock.show();
   };
 
-  _logout = () => {
-    window.localStorage.removeItem('auth0IdToken');
-    window.location.reload();
-  };
-
   render() {
-    return (
-      <div style={this.loginButton} onClick={this._login}>
-        Login to get started
-      </div>
-    );
+    return <this.LoginBtn onClick={this._login}>Get Started</this.LoginBtn>;
   }
 }
 
-export default Login;
+export default withRouter(Login);

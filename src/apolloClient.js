@@ -13,9 +13,8 @@ networkInterface.use([
 
       // get the authentication token from local storage if it exists
       if (localStorage.getItem('auth0IdToken')) {
-        req.options.headers.authorization = `Bearer ${localStorage.getItem(
-          'auth0IdToken'
-        )}`;
+        const token = localStorage.getItem('auth0IdToken');
+        req.options.headers.authorization = `Bearer ${token}`;
       }
       next();
     }
