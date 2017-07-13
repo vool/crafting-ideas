@@ -47,6 +47,9 @@ const ProfileCard = ({ data }) => {
           <Username>
             @{data.user.username}
           </Username>
+          <p>
+            {data.user.about}
+          </p>
         </Info>
       </Card>
     </Container>

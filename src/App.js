@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from './assets/images/LA.png';
 import Login from './components/auth/Login';
-import ProfileCard from './components/user/ProfileCard';
+import Home from './components/Home';
 
 const Container = styled.div`
   margin-top: 80px;
@@ -31,7 +31,7 @@ const Logo = styled.img`
 `;
 
 const renderLoggedIn = () => {
-  return <ProfileCard />;
+  return <Home />;
 };
 
 const renderLoggedOut = () => {

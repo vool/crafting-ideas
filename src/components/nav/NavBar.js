@@ -9,6 +9,7 @@ class NavBar extends React.Component {
     color: white;
     font-weight: 600;
     padding: 20px;
+    z-index: 9999;
   `;
 
   HomeNav = styled.div`
