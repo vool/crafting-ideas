@@ -45,11 +45,13 @@ class CreateUser extends React.Component {
   `;
 
   createUser = () => {
+    const profile = JSON.parse(window.localStorage.getItem('profile'));
     const variables = {
       idToken: window.localStorage.getItem('auth0IdToken'),
-      email: 'mtyleranton@gmail.com',
-      name: 'Tyler Anton',
-      username: this.state.username
+      email: profile.email,
+      name: profile.name,
+      username: this.state.username,
+      picture: profile.picture
     };
 
     this.props
@@ -94,12 +96,14 @@ const createUser = gql`
     $name: String!
     $email: String!
     $username: String!
+    $picture: String!
   ) {
     createUser(
       authProvider: { auth0: { idToken: $idToken } }
       name: $name
       email: $email
       username: $username
+      picture: $picture
     ) {
       id
     }

@@ -39,7 +39,7 @@ const ProfileCard = ({ data }) => {
   return (
     <Container>
       <Card>
-        <ProfilePic src="http://via.placeholder.com/140x140" />
+        <ProfilePic src={data.user.picture} />
         <Info>
           <h3>
             {data.user.name}
@@ -66,6 +66,8 @@ const userQuery = gql`
       id
       name
       username
+      about
+      picture
     }
   }
 `;
