@@ -34,7 +34,6 @@ class Login extends React.Component {
 
       this._lock.getUserInfo(authResult.accessToken, (err, profile) => {
         if (err) return console.log(err);
-        console.log(profile);
         window.localStorage.setItem('profile', JSON.stringify(profile));
       });
 
