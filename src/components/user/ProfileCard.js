@@ -11,7 +11,7 @@ const Container = styled.div`
 `;
 
 const Card = Container.extend`
-  margin-top: 100px;
+  margin-top: 10%;
   width: 500px;
   height: 250px;
   border: 1px solid #e6e6e6;
