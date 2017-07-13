@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import { graphql, gql } from 'react-apollo';
 
 class IdeaInput extends React.Component {
   static propTypes = {
     createIdea: PropTypes.func.isRequired,
-    data: PropTypes.object.isRequired
+    userId: PropTypes.string.isRequired
   };
 
   state = {
@@ -34,12 +32,10 @@ class IdeaInput extends React.Component {
   createIdea = () => {
     const variables = {
       name: this.state.name,
-      userId: this.props.data.user.id
+      userId: this.props.userId
     };
 
-    this.props.createIdea({ variables }).then(res => {
-      window.location.reload();
-    });
+    this.props.createIdea({ variables });
   };
 
   render() {
@@ -54,24 +50,4 @@ class IdeaInput extends React.Component {
   }
 }
 
-const createIdea = gql`
-  mutation createIdea($name: String!, $userId: ID!) {
-    createIdea(name: $name, userId: $userId) {
-      name
-    }
-  }
-`;
-
-const userQuery = gql`
-  query userQuery {
-    user {
-      id
-    }
-  }
-`;
-
-export default graphql(createIdea, { name: 'createIdea' })(
-  graphql(userQuery, { options: { fetchPolicy: 'network-only' } })(
-    withRouter(IdeaInput)
-  )
-);
+export default IdeaInput;

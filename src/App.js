@@ -48,7 +48,7 @@ const renderLoggedOut = () => {
 };
 
 const App = ({ data }) => {
-  if (data.loading) <div>Loading...</div>;
+  if (data.loading) return <div>Loading...</div>;
 
   return (
     <Container>
