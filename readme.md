@@ -25,12 +25,6 @@ Other people can then take a look at the profiles and see what ideas they think 
 
 Here is one such idea. This idea is nothing though until someone actually builds and makes it a 'thing'. This platform should minimse the time that it takes from getting a raw idea out into the world and seeing it grow.
 
-<h1 align="center"> Implementation</h1>
-
-I want to create a working MVP as soon as possible. Since this platform is essentially a social network for sharing and building on ideas together, it needs traction to actually be of any use. If there are no people, there is no value in the product.
-
-I will try to create a mock prototype with React and [create react app](https://github.com/facebookincubator/create-react-app) and then iterate on that adding backend and database as I go.
-
 <h1 align="center"> Build it 🚀 </a></h1>
 
 To run it locally, clone the project and run
@@ -51,8 +45,8 @@ If you want to help, there is an [active slack group](https://join.slack.com/cra
 There is a list of [open issues](https://github.com/nikitavoloboev/crafting-ideas/issues) you can take a look at. Choose any that you think are interesting or add your own.
 
 
-  <h1 align="center"> Help 💚</h1>
+ <h1 align="center"> Help 💚</h1>
 
 I hope I am not alone in wanting to build this and other people will join me in this.
 
-I have created a [Slack Channel](https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA) that you can join if you wish to work together with me on this.
+I have created a [Slack Channel](https://join.slack.com/crafting-ideas/shared_invite/MjAwMzQ3MDY1NjY5LTE0OTc5MTg3ODUtYmIwYTg4MTkwMA) that you can join if you wish to bring this idea to reality.
