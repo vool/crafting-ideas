@@ -41,7 +41,7 @@ class IdeaInput extends React.Component {
   render() {
     return (
       <this.Input
-        placeholder="Brind your idea to life"
+        placeholder="Bring your idea to life"
         value={this.state.name}
         onChange={e => this.setState({ name: e.target.value })}
         onKeyDown={this.handleSubmit}
